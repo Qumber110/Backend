@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 });
 
 const sendEmail = expressAsyncHandler(async (req, res) => {
-  const { email, subject, attachments, message } = req.body;
+  const { email, subject, message } = req.body;
   console.log(email, subject, message);
 
   var mailOptions = {
